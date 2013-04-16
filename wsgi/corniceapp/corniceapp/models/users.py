@@ -56,15 +56,12 @@ class User(Base):
             username=self.username,
             name=self.name,
             email=self.email,
+            id=self.id_,
         )
 
     @classmethod
     def get_by_username(cls, username):
         return DBSession.query(cls).filter(cls.username == username).first()
-
-    @classmethod
-    def get_by_dev_id(cls, dev_id):
-        return DBSession.query(cls).filter(cls.dev_id == dev_id).first()
 
     @classmethod
     def all(cls):

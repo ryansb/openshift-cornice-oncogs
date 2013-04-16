@@ -15,4 +15,9 @@ def get_info(request):
 
 @users.get()
 def get_users(request):
-    return User.all()
+    return {"users": [u.to_dict() for u in User.all()]}
+
+#@users.post()
+#def post_users(request):
+#    request
+#    return
