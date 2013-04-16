@@ -5,8 +5,9 @@ from pyramid.config import Configurator
 import os
 
 
-db_url = "mysql://%s:%s" % (os.environ["OPENSHIFT_MYSQL_DB_HOST"],
-                            os.environ["OPENSHIFT_MYSQL_DB_PORT"])
+db_name = "oncogs"
+
+db_url = os.environ["OPENSHIFT_MYSQL_DB_URL"] + db_name
 
 
 def main(global_config, **settings):

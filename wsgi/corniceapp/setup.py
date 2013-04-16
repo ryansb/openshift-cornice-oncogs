@@ -33,6 +33,8 @@ setup(name='corniceapp',
         'SQLAlchemy',
         'zope.sqlalchemy',
         'WebError',
+        'MySQL-python',
+        'cryptacular'
     ],
     entry_points = """\
     [paste.app_factory]
