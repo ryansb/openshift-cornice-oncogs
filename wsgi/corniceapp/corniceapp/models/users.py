@@ -67,7 +67,7 @@ class User(Base):
         return DBSession.query(cls).filter(cls.dev_id == dev_id).first()
 
     @classmethod
-    def get_all(cls):
+    def all(cls):
         return DBSession.query(cls).all()
 
     @classmethod

@@ -6,7 +6,7 @@ from zope.sqlalchemy import ZopeTransactionExtension
 Base = declarative_base()
 
 
-from panstora import db_url
+from corniceapp import db_url
 _engine = create_engine(db_url)
 
 DBSession = scoped_session(
